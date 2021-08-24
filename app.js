@@ -29,5 +29,14 @@ for (let a = 0; a < listItems.length; a++) {
       e.preventDefault();
       list.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
     });
+
+    list.addEventListener("dragleave", function () {
+      list.style.backgroundColor = "rgba(88, 65, 83, 0.5)";
+    });
+
+    list.addEventListener("drop", function () {
+      list.append(draggedItem);
+      list.style.backgroundColor = "rgba(88, 65, 83, 0.5)";
+    });
   }
 }
