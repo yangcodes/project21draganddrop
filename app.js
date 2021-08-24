@@ -18,4 +18,16 @@ for (let a = 0; a < listItems.length; a++) {
       dragItem = null;
     }, 50);
   });
+  for (let b = 0; b < lists.length; b++) {
+    const list = lists[b];
+
+    list.addEventListener("dragover", function (e) {
+      e.preventDefault();
+    });
+
+    list.addEventListener("dragenter", function (e) {
+      e.preventDefault();
+      list.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
+    });
+  }
 }
